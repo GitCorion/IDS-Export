@@ -145,12 +145,12 @@ def extract_tvg_id(channel_title):
 		return "LA 1 HD"
 	elif "BAR" in title and "BARÇA" not in title:
 		return 'M+ LALIGATV BAR'
-	elif "SMARTBANK 2" in title or "SMARTBANK M2" in title:
-		return 'LaLiga SmartbankTV M2 HD'
-	elif "SMARTBANK 3" in title:
-                return 'LaLiga SmartbankTV M3 HD'
-	elif "SMARTBANK" in title or "SMARTBANCK" in title:
-		return 'LaLiga SmartbankTV HD'
+	elif "Hypermotion 2" in title or "Hypermotion M2" in title:
+		return 'LaLiga TV Hypermotion 2'
+	elif "Hypermotion 3" in title:
+                return 'LaLiga TV Hypermotion 3'
+	elif "Hypermotion" in title or "SMARTBANCK" in title:
+		return 'LaLiga TV Hypermotion'
 	elif "# 0" in title or "#0" in title:
 		return 'M+ #0 HD'
 	elif "VAMOS" in title:
