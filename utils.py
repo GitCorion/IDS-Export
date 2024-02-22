@@ -65,7 +65,7 @@ tvg_ids_logos = {'GOL MUNDIAL HD': 'https://i.postimg.cc/3ryZ9n8G/golmundial.png
                  'SETANTA': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6gKALgnJ-yAuP-WEwXAioFZ98lGiaiOvaAh4JN4q8umxsMxiylU-meSp8jCuVfpcevcU&usqp=CAU',
                  'OTROS': 'https://i.imgur.com/U4w7Bgy.png'}
 
-group_title_order = ["GOL MUNDIAL", "GOL MUNDIAL 2", "manuK0S", "M+ LaLiga", "DAZN LaLiga", "M+ Champions", "DAZN F1", "DAZN",  "M+ Deportes", "M+ LaLiga BAR", "M+ LaLiga Smartbank", "EuroSport", "Otros"]
+group_title_order = ["GOL MUNDIAL", "GOL MUNDIAL 2", "manuK0S", "M+ LaLiga", "DAZN LaLiga", "M+ Champions", "DAZN F1", "DAZN",  "M+ Deportes", "M+ LaLiga BAR", "M+ LaLiga Hypermotion", "EuroSport", "Otros"]
 
 
 def extract_group_title(channel_title):
@@ -85,10 +85,10 @@ def extract_group_title(channel_title):
 		return "EuroSport"
 	elif "DEPORTES" in title or "VAMOS" in title or "GOLF" in title or "ELLAS" in title:
 		return "M+ Deportes"
-	elif "LIGA" in title and "BAR" not in title and "DAZN" not in title and "SMARTBANK" not in title and "CAMPEONES" not in title:
+	elif "LIGA" in title and "BAR" not in title and "DAZN" not in title and "Hypermotion" not in title and "CAMPEONES" not in title:
 		return "M+ LaLiga"
-	elif "SMARTBANK" in title or "SMARTBANCK" in title:
-		return "M+ LaLiga Smartbank"
+	elif "Hypermotion" in title or "Hypermotiontv" in title:
+		return "M+ LaLiga Hypermotion"
 	elif "BAR" in title and "BARÇA" not in title and "BARCA" not in title:
 		return "M+ LaLiga BAR"
 	elif "CAMPEONES" in title or "M.L." in title:
@@ -149,7 +149,7 @@ def extract_tvg_id(channel_title):
 		return 'LaLiga TV Hypermotion 2'
 	elif "Hypermotion 3" in title:
                 return 'LaLiga TV Hypermotion 3'
-	elif "Hypermotion" in title or "SMARTBANCK" in title:
+	elif "Hypermotion" in title or "Hypermotiontv" in title:
 		return 'LaLiga TV Hypermotion'
 	elif "# 0" in title or "#0" in title:
 		return 'M+ #0 HD'
@@ -157,7 +157,7 @@ def extract_tvg_id(channel_title):
 		return 'M+ #VAMOS HD'
 	elif "GOLF" in title:
 		return 'M+ GOLF HD'
-	elif "LIGA" in title and "BAR" not in title and "DAZN" not in title and "SMARTBANK" not in title and "CAMPEONES" not in title:
+	elif "LIGA" in title and "BAR" not in title and "DAZN" not in title and "Hypermotion" not in title and "CAMPEONES" not in title:
 		return "M+ LaLigaTV HD"
 	elif "DEPORTES" in title:
 		if "2" in title:
